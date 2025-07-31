@@ -1,0 +1,23 @@
+service: coldstart-java
+frameworkVersion: '~4.0'
+
+provider:
+  name: aws
+  runtime: java17
+  architecture: arm64
+  memorySize: 1024
+  timeout: 5
+  profile: awsDevelopment
+  stage: dev
+  region: us-east-1
+
+package:
+  artifact: target/coldstart-java-1.0-SNAPSHOT.jar
+
+functions:
+  hello:
+    handler: com.example.Handler::handleRequest
+    events:
+      - httpApi:
+          path: /java/hello
+          method: GET

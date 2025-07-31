@@ -1,0 +1,20 @@
+service: coldstart-ruby
+frameworkVersion: '~4.0'
+
+provider:
+  name: aws
+  runtime: ruby3.2
+  architecture: arm64
+  memorySize: 1024
+  timeout: 5
+  profile: awsDevelopment
+  stage: dev
+  region: us-east-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /ruby/hello
+          method: GET

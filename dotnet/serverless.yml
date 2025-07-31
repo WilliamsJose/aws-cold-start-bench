@@ -1,0 +1,23 @@
+service: coldstart-dotnet
+frameworkVersion: '~4.0'
+
+provider:
+  name: aws
+  runtime: dotnet8
+  architecture: arm64
+  memorySize: 1024
+  timeout: 5
+  profile: awsDevelopment
+  stage: dev
+  region: us-east-1
+
+package:
+  artifact: function.zip
+  
+functions:
+  hello:
+    handler: ColdstartDotnet::ColdstartDotnet.Function::FunctionHandler
+    events:
+      - httpApi:
+          path: /dotnet/hello
+          method: GET
