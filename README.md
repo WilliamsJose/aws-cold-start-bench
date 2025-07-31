@@ -14,12 +14,23 @@ Os runtimes suportados neste benchmark são:
 ## Estrutura do Projeto
 
 ├── serverless-coldstart/
+
 │ ├── node/
+
 │ ├── python/
+
 │ ├── ruby/
+
+│ ├── public/
+
 │ ├── java/
+
 │ ├── dotnet/
+
 │ ├── scripts/ -> Scripts auxiliares (deploy e testes)
+
+├── README.md
+
 └── .gitignore
 
 Cada pasta é **um projeto Serverless independente**, permitindo controle separado de build e deploy.
