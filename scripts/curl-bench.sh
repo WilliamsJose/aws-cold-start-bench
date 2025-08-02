@@ -4,11 +4,11 @@ set -euo pipefail
 # Força conversão correta de URLs e timing no Git Bash/Windows
 export MSYS_NO_PATHCONV=1
 
-NODE_URL="${NODE_URL:-https://waxg68p0u8.execute-api.us-east-1.amazonaws.com/node/hello}"
-PY_URL="${PY_URL:-https://lnfi1t6jog.execute-api.us-east-1.amazonaws.com/python/hello}"
-RB_URL="${RB_URL:-https://y087r5gxxc.execute-api.us-east-1.amazonaws.com/ruby/hello}"
-JAVA_URL="${JAVA_URL:-https://gkr6ll70dh.execute-api.us-east-1.amazonaws.com/java/hello}"
-DOTNET_URL="${DOTNET_URL:-https://76ylb93uwa.execute-api.us-east-1.amazonaws.com/dotnet/hello}"
+NODE_URL="${NODE_URL:-https://<api-id>.execute-api.us-east-1.amazonaws.com/node/hello}"
+PY_URL="${PY_URL:-https://<api-id>.execute-api.us-east-1.amazonaws.com/python/hello}"
+RB_URL="${RB_URL:-https://<api-id>.execute-api.us-east-1.amazonaws.com/ruby/hello}"
+JAVA_URL="${JAVA_URL:-https://<api-id>.execute-api.us-east-1.amazonaws.com/java/hello}"
+DOTNET_URL="${DOTNET_URL:-https://<api-id>.execute-api.us-east-1.amazonaws.com/dotnet/hello}"
 
 for url in "$NODE_URL" "$PY_URL" "$RB_URL" "$JAVA_URL" "$DOTNET_URL"; do
   echo "Testando $url"

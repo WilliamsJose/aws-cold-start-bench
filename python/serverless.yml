@@ -1,6 +1,9 @@
 service: coldstart-python
 frameworkVersion: '~4.0'
 
+plugins:
+  - serverless-python-requirements
+
 provider:
   name: aws
   runtime: python3.11
@@ -10,6 +13,14 @@ provider:
   profile: awsDevelopment
   stage: dev
   region: us-east-1
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    slim: true
+    strip: false
+    noDeps: false
+    zip: true
 
 functions:
   hello:

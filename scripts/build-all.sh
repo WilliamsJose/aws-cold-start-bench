@@ -11,7 +11,7 @@ echo "===> Build Java (Maven)..."
 docker run --rm \
   -v "${BASE_PATH}/java":/app \
   -w /app \
-  maven:3.9.4-eclipse-temurin-17 \
+  maven:3.9.11-amazoncorretto-21-debian-bookworm \
   mvn clean package -DskipTests
 
 echo "===> Build .NET (dotnet publish)..."

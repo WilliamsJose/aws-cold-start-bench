@@ -5,7 +5,7 @@ set -euo pipefail
 export MSYS_NO_PATHCONV=1
 
 # Lista de runtimes
-RUNTIMES=(node python ruby java dotnet)
+RUNTIMES=(python ruby java dotnet)
 
 echo "=== Removendo todas as funções Serverless ==="
 
